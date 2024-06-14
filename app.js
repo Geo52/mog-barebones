@@ -1,16 +1,29 @@
-function getSelectedValues() {
-  event.preventDefault();
+const inputForm = document.querySelector("form");
+const divThatDisplaysExerciseName = document.getElementById("exercise-history");
 
-  let exerciseDropdown = document.getElementById("exercise-dropdown");
-  let exerciseDropdownSelectedValue = exerciseDropdown.value;
+inputForm.addEventListener("submit", diplayValues);
 
-  let weightInput = document.getElementById("weight-input");
-  let weightInputedValue = weightInput.value;
+function diplayValues(e) {
+  e.preventDefault();
 
-  let repsInput = document.getElementById("reps-input");
-  let repsInputValue = repsInput.value;
+  // get all the inputted values from the form
+  const selectedExercise = document.getElementById("exercise-dropdown").value;
+  const weightInput = document.getElementById("weight-input").value;
+  const repsInput = document.getElementById("reps-input").value;
 
-  alert(
-    repsInputValue + exerciseDropdownSelectedValue + " " + weightInputedValue
-  );
+
+  const newListItem = document.createElement("li");
+  newListItem.textContent = "Exercise: "+ selectedExercise;
+  divThatDisplaysExerciseName.append(newListItem)
+
+
+  const newListItem2 = document.createElement("li");
+  newListItem2.textContent = "Weight: " + weightInput
+  divThatDisplaysExerciseName.append(newListItem2)
+
+  const newListItem3 = document.createElement("li")
+  newListItem3.textContent = "Reps: " + repsInput
+  divThatDisplaysExerciseName.append(newListItem3)
+
+
 }

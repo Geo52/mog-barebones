@@ -11,20 +11,30 @@
       <h3>Exercise</h3>
 
       <select id="exercise-dropdown">
-        <option>Select an excercise</option>
+        <option>Select an exercise</option>
         <option>bench</option>
         <option>squat</option>
         <option>deadlift</option>
       </select>
 
-      <h3>weight</h3>
+      <h3>Weight</h3>
       <input id="weight-input" type="number" />
 
-      <h3>reps</h3>
+      <h3>Reps</h3>
       <input id="reps-input" type="number" />
 
-      <input type="submit" onclick="getSelectedValues()" />
+      <!-- when user clicks submit function will fire grabing all the inputted values and display them below  -->
+      <input type="submit" />
     </form>
+
+    <!-- display the information inputted -->
+    <!-- 
+      exercise: bench
+      reps: 4
+      weight: 245
+     -->
+    <div id="exercise-history"></div>
+
 
     <script src="app.js"></script>
   </body>
