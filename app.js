@@ -11,19 +11,18 @@ function diplayValues(e) {
   const weightInput = document.getElementById("weight-input").value;
   const repsInput = document.getElementById("reps-input").value;
 
+  const newListItem = document.createElement("div");
+  newListItem.textContent = selectedExercise;
+  divThatDisplaysExerciseName.append(newListItem);
 
-  const newListItem = document.createElement("li");
-  newListItem.textContent = "Exercise: "+ selectedExercise;
-  divThatDisplaysExerciseName.append(newListItem)
+  const newListItem2 = document.createElement("div");
+  newListItem2.textContent = "Weight: " + weightInput;
+  divThatDisplaysExerciseName.append(newListItem2);
 
+  const newListItem3 = document.createElement("div");
+  newListItem3.textContent = "Reps: " + repsInput;
+  divThatDisplaysExerciseName.append(newListItem3);
 
-  const newListItem2 = document.createElement("li");
-  newListItem2.textContent = "Weight: " + weightInput
-  divThatDisplaysExerciseName.append(newListItem2)
-
-  const newListItem3 = document.createElement("li")
-  newListItem3.textContent = "Reps: " + repsInput
-  divThatDisplaysExerciseName.append(newListItem3)
-
-
+  const newListItem4 = document.createElement("br");
+  divThatDisplaysExerciseName.append(newListItem4);
 }
